@@ -7,7 +7,7 @@ int main()
     DBusConnection *conn;
 
     // connect to the system bus
-    dbus_error_init(&error);
+    dbus_error_init(error);
     conn = dbus_bus_get(DBUS_BUS_SYSTEM, error);
 
     if (!conn)
