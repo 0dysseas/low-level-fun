@@ -23,7 +23,7 @@ int main()
 
     if (dbus_error_is_set(&error))
     {
-        print_dbus_error("Error while dbus_bus_get");
+        print_dbus_error("Error in client for dbus_bus_get");
     }
 
     if (!conn)
@@ -74,6 +74,8 @@ int main()
 
     // Flush the connection buffer. Blocks until the outgoing message queue is empty
     dbus_connection_flush(conn);
+
+    return 0;
 }
 
 void print_dbus_error(char *str)
